@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    /* text-align: center; */
+    background-color: rgb(247, 247, 247);
+    font-family: "Lato";
+    font-style: normal;
+}
+
+
+.menu {
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+
+.content {
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    padding: 10px;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover, a:active {
+    color: lightblue;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.align-center {
+    text-align: center;
+}
+
+img.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
