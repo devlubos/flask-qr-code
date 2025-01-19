@@ -14,7 +14,7 @@
             <h1>QR code generator</h1>
             <div class="text-start">
                 <p>This is a simple QR code generator. Enter the URL you want to encode and click the button to generate the QR code.</p>
-                <form method="post">
+                <form action="/qrcode" method="get">
                     <label for="url" class="form-label">Enter URL:</label>
                     <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL">
                     <br>
@@ -25,14 +25,17 @@
             </div>
 
             <div class="p-5">
+                <h3>QR code generated for: {{ url_link }}</h3>
+            </div>
+            <div class="p-5">
                 <img src="{{ qrcode(url_link) }}">
             </div>
 
             <div class="text-start">
-                <h2>Last genereted codes:</h2>
+                <h3>Last genereted codes:</h3>
                 <div class="list-group">
                 {% for last_url in recent_values %}
-                    <a href="#" class="list-group-item list-group-item-action">{{ last_url }}</a>
+                    <a href="{{ url_for('main_app.qrcode', url = last_url) }}" class="list-group-item list-group-item-action">{{ last_url }}</a>
                 {% endfor %}
                 </div>
         </div>
